@@ -3,7 +3,7 @@
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Modified version of `@lit/react` for vanilla custom elements with support for SSR.
+ * Modified version of `@lit/react` for SSSF.
  */
 import type React from 'react';
 type TReact = typeof React;

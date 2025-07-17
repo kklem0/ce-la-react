@@ -217,9 +217,10 @@ export function createComponent<I extends HTMLElement, E extends EventNames = {}
       // If the attribute is listed in observedAttributes, it's likely
       // a primitive value that should be set as an attribute and will
       // internally be reflected to the accompanying property.
+      const proto = elementClass.prototype;
       if (
-        elementClass.prototype &&
-        k in elementClass.prototype &&
+        proto &&
+        k in proto &&
         !(k in (globalThis.HTMLElement?.prototype ?? {})) &&
         !elementClass.observedAttributes?.some((attr) => attr === attrName)
       ) {

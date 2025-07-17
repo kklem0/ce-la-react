@@ -51,7 +51,7 @@ function createComponent({
         continue;
       }
       const attrName = toAttributeName(reactPropToAttrNameMap[k] ?? k);
-      if (k in elementClass.prototype && !(k in (globalThis.HTMLElement?.prototype ?? {})) && !elementClass.observedAttributes?.some((attr) => attr === attrName)) {
+      if (elementClass.prototype && k in elementClass.prototype && !(k in (globalThis.HTMLElement?.prototype ?? {})) && !elementClass.observedAttributes?.some((attr) => attr === attrName)) {
         elementProps[k] = v;
         continue;
       }
